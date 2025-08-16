@@ -330,8 +330,8 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    padding-left: 85px;
-    padding-top: 60px;
+    padding-left: 6.5%;
+    padding-top: 70px;
     padding-right: 30px;
     padding-bottom: 10px;
    }
