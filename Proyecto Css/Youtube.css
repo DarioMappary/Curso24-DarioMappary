@@ -324,6 +324,11 @@ img {
       cursor: pointer;
     }
 
+    #all-btn {
+      background-color: black;
+      color: white;
+    }
+
    
    
    .grid-container {
