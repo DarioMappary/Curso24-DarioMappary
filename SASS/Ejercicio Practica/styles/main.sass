@@ -1,0 +1,68 @@
+
+
+$primary-color: #530d53
+$secondary-color: #06768a
+$warning-color: #b90f0f
+$succes-color: #0fa10a
+$spacing-small: 4px
+$spacing-mid: 16px 
+$spacing-Large: 24px
+$text-color-dark: #000000
+$text-color-light: #ece0e0
+$big-font: 1.6rem
+$mid-font: 1.1rem
+$small-font: 0.7rem
+$border-r: 14px
+
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+@mixin base_btn()
+ display: flex
+ align-items: center
+ justify-content: center
+ border-radius: $border-r
+ padding: $spacing-small*2
+ cursor: pointer
+ border: none
+.containerBtn
+    width: 100%
+    display: flex
+    justify-content: center
+    padding-top: $spacing-Large*4
+    gap: $spacing-Large*2
+ 
+.btn
+   @include base_btn
+   &:hover
+    scale: 1.1 
+   &:active
+    scale: 1
+   &--primary
+    background-color: $primary-color
+    color: $text-color-light
+    font-size: $small-font
+   &--secondary
+    background-color: $secondary-color
+    font-size: $mid-font
+   &--warning
+    background-color: $warning-color
+    font-size: $big-font
+   &--succes
+    background-color: $succes-color
+    font-size: $mid-font
+   &--disabled 
+    cursor: not-allowed
+    font-size: $mid-font
+    &:hover 
+        scale: none
+    
+  
+  
+    
+    
+
+    

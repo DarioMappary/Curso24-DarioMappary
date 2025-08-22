@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.containerBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 96px;
+  gap: 48px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  padding: 8px;
+  cursor: pointer;
+  border: none;
+}
+.btn:hover {
+  scale: 1.1;
+}
+.btn:active {
+  scale: 1;
+}
+.btn--primary {
+  background-color: #530d53;
+  color: #ece0e0;
+  font-size: 0.7rem;
+}
+.btn--secondary {
+  background-color: #06768a;
+  font-size: 1.1rem;
+}
+.btn--warning {
+  background-color: #b90f0f;
+  font-size: 1.6rem;
+}
+.btn--succes {
+  background-color: #0fa10a;
+  font-size: 1.1rem;
+}
+.btn--disabled {
+  cursor: not-allowed;
+  font-size: 1.1rem;
+}
+.btn--disabled:hover {
+  scale: none;
+}/*# sourceMappingURL=main.css.map */
