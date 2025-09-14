@@ -1,0 +1,228 @@
+$bgcolor-gray:  #1f1f1f 
+$bgcolor-body: #000
+$fill-svg: #eaf8ef8f
+
+@mixin display ($align)
+ display: flex
+ align-items: $align
+
+@mixin btnsvg ($spacing)
+ width: $spacing
+ height: $spacing
+ border: none  
+  
+  
+@mixin styleSvg($spacing)
+ width: $spacing
+ height: $spacing
+
+
+@mixin btntext($fontW, $fontS)
+  background-color: $bgcolor-body
+  color: $fill-svg
+  border: none
+  height: 48px
+  font-weight: $fontW
+  font-size: $fontS
+  transition: color 0.3s ease
+  cursor: pointer
+
+
+
+
+nav 
+  @include display (flex-start)
+  flex-direction: row
+  gap: 1%
+  margin-top: 0.5%
+
+
+  .containerLogo
+    @include display (flex-start)
+    justify-content: center
+    width: 72px
+    height: 72px
+    margin-top: 0.7%
+    @media (max-width:481px)
+     width: 32px
+     height: 32px
+    cursor: pointer
+    &_Logo
+      width: 32px
+      height: 32px
+
+  .containerHomeSrchbar
+    @include display (center)
+    gap: 1.5%
+    width: 40dvw
+    @media (max-width:1250px)
+      width: 30dvw
+    @media (max-width:1062px)
+      width: 25dvw
+    @media (max-width:876px)
+      width: 5dvw
+    &_homebtn 
+      @include btnsvg (48px)
+      border-radius: 50%
+      @include display (center) 
+      justify-content: center
+      background-color: $bgcolor-gray
+      cursor: pointer
+      transition: background-color 0.3s ease, color 0.3s ease
+      color: $fill-svg
+      @media (max-width:876px)
+        display: none
+      &:hover
+        background-color:  #4949499f
+        color: #fff
+      
+      .containersvgHome
+        width: 24px
+        height: 24px
+        &_svg
+          @include styleSvg(24px)
+          
+    
+    &_searchbar
+      @include display (center)
+      width: 35dvw
+      position: relative
+      @media (max-width:1250px)
+        width: 25dvw
+      @media (max-width:876px)
+        width: 40px
+      &_btnsrch  
+        @include btnsvg (40px)
+        border-bottom-left-radius: 40px
+        border-top-left-radius: 40px
+        position: absolute
+        margin: 4px
+        background-color: rgba(0, 0, 0, 0)
+        cursor: pointer
+        @media (max-width:876px)
+          position: static
+          background-color: $bgcolor-gray
+          border-radius: 40%
+      .containersvgSrch_svg 
+        @include styleSvg(24px)
+        fill: $fill-svg
+        &:hover
+          fill: #fff
+      &_input
+        height: 48px
+        width: 100dvw
+        background-color: $bgcolor-gray
+        border: 0.1px solid $bgcolor-gray
+        border-radius: 40px
+        padding: 0px 48px 0px 48px
+        transition: border 0.3s ease, background-color 0.3s ease
+        &:hover 
+          border: 0.1px solid #fff
+          background-color: #4949499f 
+        &:focus
+          background-color: #4949499f 
+          color: #fff
+          font-size: 0.9rem
+          font-weight: 550
+        &::placeholder
+          color: $fill-svg
+          font-size: 0.95rem
+          font-weight: 550
+        @media (max-width:1062px)
+          width: 20dvw
+        @media (max-width:876px)
+          display: none
+        
+
+      &_btnexplore
+        @include btnsvg (40px)
+        border-bottom-right-radius: 40px
+        border-top-right-radius: 40px
+        position: absolute
+        right: 0
+        margin: 10px
+        background-color: rgba(0, 0, 0, 0)
+        cursor: pointer
+        @media (max-width:876px)
+          display: none
+      .containersvgExplore 
+        width: 24px
+        height: 24px
+        border-left: 1px solid $fill-svg
+        padding-left: 12px
+        &_svg
+         @include styleSvg(24px) 
+         fill: $fill-svg
+         &:hover
+          fill: #fff
+
+  .containerBtns1
+    @include display (center)
+    gap: 6%
+    @media (max-width:689px)
+      display: none
+    &_btn
+      @include btntext(600, 0.95rem)
+      &:hover
+        color: #fff
+      
+
+  .containerSeparator
+    display: flex
+    margin: 0.5% 2.5% 2.5% 2.5%
+    color: #fff
+    font-size: 1.8rem
+    @media (max-width:981px)
+      margin: 0.5% 0% 2.5% 1.4%
+    @media (max-width:876px)
+      display: none
+
+  .containerBtns2
+    @include display (center)
+    flex: 1
+    gap: 6%
+    margin-right: 0.5%
+    @media (max-width: 1250px)
+     margin-right: 0%
+    @media (max-width:981px)
+      gap: 2%
+    @media (max-width:876px)
+      margin-left: 5%
+    &_btn
+      @include btntext(550, 0.8rem)
+      @include display (center)
+      gap: 6px
+      &:hover
+        color: #fff
+      @media (max-width:876px)
+        gap: 1px
+      &_svg
+        width: 16px
+        height: 16px
+        @media (max-width:469px)
+          display: none
+      &--logIn
+        background-color: #fff 
+        color: $bgcolor-body
+        border-radius: 60px
+        padding: 6%
+        height: 48px
+        font-weight: 700
+        font-size: 1rem
+        &:hover
+          color: $bgcolor-body
+          background-color: #ffffffec 
+
+     
+      
+      
+
+      
+  
+        
+       
+        
+
+
+
+    

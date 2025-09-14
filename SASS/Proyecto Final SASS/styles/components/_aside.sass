@@ -1,0 +1,130 @@
+
+.aside
+    position: relative
+    
+.top
+ display: flex
+ justify-content: space-between
+ align-items: center
+ padding: 4% 4% 6% 4%
+ height: 15%
+ &_span
+    color: #fff
+    font-size: 1.05rem
+    font-weight: 550
+ &_btn
+  width: 35px
+  height: 35px
+  border-radius: 50%
+  display: flex
+  justify-content: center
+  align-items: center
+  border: none
+  background-color: #1f1f1f 
+  cursor: pointer
+  &:hover
+    background-color: #33333377 
+  &_svg
+    width: 18px
+    height: 18px
+    fill: #eaf8ef8f
+
+.playlist
+    display: flex
+    flex-direction: column
+    height: 35dvh
+    overflow-y: auto
+    gap: 8%
+    padding: 2%
+    &::-webkit-scrollbar
+        background-color: transparent
+        width: 0.9dvw
+    &::-webkit-scrollbar-thumb
+        background-color: rgba(255, 255, 255, 0.15)
+        backdrop-filter: blur(10px)
+        &:hover
+            background-color: rgba(255, 255, 255, 0.363)
+        
+    &_playlist
+        border-radius: 8px
+        background-color: #33333377 
+        display: flex
+        flex-direction: column
+        padding: 4%
+        line-height: 2
+    &_podcast
+        border-radius: 8px
+        background-color: #33333377 
+        display: flex
+        flex-direction: column
+        padding: 4%
+        line-height: 2
+    &_h3
+        color: #fff
+        font-size: 1.05rem
+        font-weight: 600
+    &_span
+        color: #fff
+        font-weight: 500
+        font-size: 0.9rem
+    &_btn
+        border-radius: 40px
+        background-color: #fff
+        padding: 2%
+        border: 1px solid #1f1f11       
+        font-size: 0.95rem
+        font-weight: 550
+        margin-top: 5%
+        white-space: nowrap
+        width: 40%
+        cursor: pointer
+        &:hover
+            scale: 1.05
+    
+.footer 
+    position: absolute
+    bottom: 0
+    &_legal
+        padding: 8% 0% 0% 4%
+        font-size: 0.8rem
+        line-height: 2
+        &_span
+            padding: 2%
+            color: #eaf8ef8f
+            cursor: pointer
+        &_Cookie
+           color: #fff 
+           padding: 0% 2% 0% 2%
+           font-size: 0.82rem
+           cursor: pointer
+           transition:  text-decoration 0.3s ease
+           width: 15%
+           &:hover
+            text-decoration: underline
+          
+    &_language
+        padding: 8% 4%
+        &_btn
+            color: #fff 
+            background-color: #1f1f1f 
+            border: 0.5px solid  #eaf8ef8f
+            border-radius: 20px
+            padding: 10px
+            display: flex
+            gap: 6px
+            font-weight: 700
+            font-size: 0.84rem
+            padding: 2% 5% 2% 5%
+            cursor: pointer
+            transition: border 0.3s ease
+            &:hover
+                 border: 0.5px solid #fff
+            &_svg
+                width: 18px
+                height: 18px
+                fill: #fff
+               
+
+    
+
+    
