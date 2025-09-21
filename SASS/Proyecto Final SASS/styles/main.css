@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -297,6 +298,21 @@ nav .containerBtns2_btn--logIn {
   font-weight: 700;
   font-size: 1rem;
 }
+@media (min-width: 1150px) {
+  nav .containerBtns2_btn--logIn {
+    padding: 4%;
+  }
+}
+@media (max-width: 870px) {
+  nav .containerBtns2_btn--logIn {
+    padding: 4%;
+  }
+}
+@media (max-width: 480px) {
+  nav .containerBtns2_btn--logIn {
+    padding: 0%;
+  }
+}
 nav .containerBtns2_btn--logIn:hover {
   color: #000;
   background-color: rgba(255, 255, 255, 0.9254901961);
@@ -320,6 +336,11 @@ header {
 
 .aside {
   position: relative;
+}
+@media (max-width: 580px) {
+  .aside {
+    display: none;
+  }
 }
 
 .top {
@@ -358,16 +379,20 @@ header {
   display: flex;
   flex-direction: column;
   height: 35dvh;
-  overflow-y: auto;
+  overflow: hidden;
   gap: 8%;
-  padding: 2%;
+  padding: 2% 0% 2% 2%;
+  overflow-y: auto;
+}
+.playlist:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 .playlist::-webkit-scrollbar {
   background-color: transparent;
   width: 0.9dvw;
 }
 .playlist::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: transparent;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -392,20 +417,20 @@ header {
 }
 .playlist_h3 {
   color: #fff;
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 650;
 }
 .playlist_span {
   color: #fff;
-  font-weight: 500;
-  font-size: 0.9rem;
+  font-weight: 550;
+  font-size: 0.85rem;
 }
 .playlist_btn {
   border-radius: 40px;
   background-color: #fff;
   padding: 2%;
   border: 1px solid #1f1f11;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   font-weight: 550;
   margin-top: 5%;
   white-space: nowrap;
@@ -415,6 +440,19 @@ header {
 .playlist_btn:hover {
   scale: 1.05;
 }
+.playlist_btn_r {
+  display: none;
+}
+@media (max-width: 1220px) {
+  .playlist_btn_r {
+    display: block;
+  }
+}
+@media (max-width: 1220px) {
+  .playlist_btn_r1 {
+    display: none;
+  }
+}
 
 .footer {
   position: absolute;
@@ -422,7 +460,7 @@ header {
 }
 .footer_legal {
   padding: 8% 0% 0% 4%;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   line-height: 2;
 }
 .footer_legal_span {
@@ -462,9 +500,209 @@ header {
 }
 .footer_language_btn:hover {
   border: 0.5px solid #fff;
+  scale: 1.05;
 }
 .footer_language_btn_svg {
   width: 18px;
   height: 18px;
   fill: #fff;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  overflow: hidden;
+  padding: 3%;
+}
+@media (max-width: 580px) {
+  .content {
+    width: 98dvw;
+  }
+}
+.content:hover {
+  overflow-y: auto;
+}
+.content::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.9dvw;
+}
+.content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.content::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.363);
+}
+.content_tittle {
+  height: 7dvh;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 900;
+}
+.content_ctnrCards {
+  height: 34.35dvh;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  margin-bottom: 5%;
+  position: relative;
+}
+.content_ctnrCards:hover .nav_arrow {
+  opacity: 1;
+}
+
+.card {
+  height: 34.6dvh;
+  width: 12.3dvw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.8%;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  padding: 0% 5%;
+}
+.card:hover {
+  background-color: rgba(51, 51, 51, 0.4941176471);
+}
+.card:hover .card_btnplay {
+  transform: translateY(0);
+  opacity: 1;
+}
+@media (max-width: 1285px) {
+  .card {
+    width: 14.8dvw;
+  }
+}
+@media (max-width: 1220px) {
+  .card {
+    width: 15.5dvw;
+  }
+}
+@media (max-width: 1150px) {
+  .card {
+    width: 16.5dvw;
+  }
+}
+@media (max-width: 1100px) {
+  .card {
+    width: 188.5px;
+  }
+}
+.card_img {
+  width: 11dvw;
+  height: 24dvh;
+  border-radius: 8px;
+}
+@media (max-width: 1220px) {
+  .card_img {
+    width: 135px;
+  }
+}
+.card_img--imgartist {
+  border-radius: 50%;
+}
+.card_tittle {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: -webkit-text-decoration 0.3s ease;
+  transition: text-decoration 0.3s ease;
+  transition: text-decoration 0.3s ease, -webkit-text-decoration 0.3s ease;
+}
+.card_tittle:hover {
+  text-decoration: underline;
+}
+.card_artist {
+  color: rgba(255, 255, 255, 0.5607843137);
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: -webkit-text-decoration 0.3s ease;
+  transition: text-decoration 0.3s ease;
+  transition: text-decoration 0.3s ease, -webkit-text-decoration 0.3s ease;
+}
+.card_artist:hover {
+  text-decoration: underline;
+}
+.card_btnplay {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  left: 65%;
+  top: 53%;
+  background-color: #1fc30d;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(30%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.card_btnplay_img {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+}
+
+.nav_arrow {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1f1f;
+  right: 13%;
+  bottom: 30%;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+}
+@media (max-width: 1285px) {
+  .nav_arrow {
+    right: 320px;
+  }
+}
+@media (max-width: 1150px) {
+  .nav_arrow {
+    right: 500px;
+  }
+}
+@media (max-width: 950px) {
+  .nav_arrow {
+    right: 630px;
+  }
+}
+@media (max-width: 750px) {
+  .nav_arrow {
+    right: 720px;
+  }
+}
+@media (max-width: 620px) {
+  .nav_arrow {
+    right: 780px;
+  }
+}
+@media (max-width: 520px) {
+  .nav_arrow {
+    right: 825px;
+  }
+}
+.nav_arrow:hover {
+  background-color: #2d2d2d;
+}
+.nav_arrow:hover .nav_arrow_path {
+  fill: #fff;
+}
+.nav_arrow_svg {
+  width: 18px;
+  height: 18px;
+}
+.nav_arrow_path {
+  fill: rgba(255, 255, 255, 0.5607843137);
 }/*# sourceMappingURL=main.css.map */

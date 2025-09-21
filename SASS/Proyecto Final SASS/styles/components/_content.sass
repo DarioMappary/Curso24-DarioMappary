@@ -1,0 +1,150 @@
+$font-primary-color: #fff
+$font-secondary-color: #ffffff8f
+
+@mixin textanimation
+ transition: text-decoration 0.3s ease
+ &:hover
+    text-decoration: underline
+    
+
+
+
+
+
+.content
+    display: grid
+    grid-template-rows: repeat(1, 1fr)
+    overflow: hidden
+    padding: 3%
+    @media ( max-width:580px  )
+      width: 98dvw
+      
+    &:hover
+        overflow-y: auto
+    &::-webkit-scrollbar
+        background-color: transparent
+        width: 0.9dvw
+    &::-webkit-scrollbar-thumb
+        background-color: rgba(255, 255, 255, 0.15)
+        backdrop-filter: blur(10px)
+        &:hover
+            background-color: rgba(255, 255, 255, 0.363)
+    &_tittle
+        height: 7dvh
+        color: $font-primary-color
+        font-size: 1rem
+        font-weight: 900
+    &_ctnrCards
+        height: 34.35dvh
+        display: grid
+        grid-template-columns: repeat(6, auto)
+        margin-bottom: 5%
+        position: relative
+        &:hover .nav_arrow
+         opacity: 1
+
+
+
+.card
+  height: 34.6dvh
+  width: 12.3dvw
+  display: flex
+  justify-content: center
+  flex-direction: column
+  gap: 2.8%
+  border-radius: 8px
+  cursor: pointer
+  position: relative
+  padding: 0% 5%
+  &:hover
+    background-color: #3333337e 
+  &:hover .card_btnplay 
+    transform: translateY(0)
+    opacity: 1
+  @media ( max-width: 1285px )
+    width: 14.8dvw
+  @media ( max-width: 1220px )
+    width: 15.5dvw
+  @media ( max-width: 1150px )
+    width: 16.5dvw
+  @media ( max-width: 1100px )
+    width: 188.5px
+    
+    
+  &_img
+    width: 11dvw
+    height: 24dvh
+    border-radius: 8px
+    @media ( max-width: 1220px )
+      width: 135px
+    &--imgartist
+        border-radius: 50%
+  &_tittle
+    color: $font-primary-color
+    font-size: 0.9rem
+    font-weight: 500
+    @include textanimation
+  &_artist
+    color: $font-secondary-color
+    font-size: 0.9rem
+    font-weight: 400
+    @include textanimation
+  &_btnplay
+    width: 45px
+    height: 45px
+    position: absolute
+    left: 65%
+    top: 53%
+    background-color: #1fc30d
+    border: none
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    opacity: 0
+    transform: translateY(30%)
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out
+    &_img
+       width: 30px
+       height: 30px 
+       margin-left: 5px
+.nav_arrow    
+  position: absolute
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  z-index: 999
+  display: flex
+  justify-content: center 
+  align-items: center
+  background-color: #1f1f1f 
+  right: 13%
+  bottom: 30%
+  border: none
+  cursor: pointer
+  opacity: 0
+  @media ( max-width: 1285px )
+    right: 320px
+  @media ( max-width: 1150px )
+    right: 500px
+  @media ( max-width: 950px )
+    right: 630px
+  @media ( max-width: 750px )
+    right: 720px
+  @media ( max-width: 620px )
+    right: 780px
+  @media ( max-width: 520px )
+    right: 825px
+
+  &:hover
+    background-color: #2d2d2d 
+  &:hover .nav_arrow_path
+    fill: #fff
+
+    
+  &_svg
+    width: 18px
+    height: 18px
+  &_path
+    fill: $font-secondary-color
+    
