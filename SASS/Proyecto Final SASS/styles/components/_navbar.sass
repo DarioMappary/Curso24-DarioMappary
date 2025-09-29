@@ -35,14 +35,17 @@ nav
   flex-direction: row
   gap: 1%
   margin-top: 0.5%
+  margin-bottom: 0.2%
+  height: 72px
+  position: relative
 
 
   .containerLogo
     @include display (flex-start)
     justify-content: center
     width: 72px
-    height: 72px
-    margin-top: 0.7%
+    height: 32px
+    margin-top: 8px
     @media (max-width:481px)
      width: 32px
      height: 32px
@@ -69,12 +72,13 @@ nav
       background-color: $bgcolor-gray
       cursor: pointer
       transition: background-color 0.3s ease, color 0.3s ease
+      aspect-ratio: 1/1
       color: $fill-svg
-      @media (max-width:876px)
-        display: none
+      aspect-ratio: 1/1
       &:hover
         background-color:  #4949499f
         color: #fff
+        scale: 1.03
       
       .containersvgHome
         width: 24px
@@ -96,15 +100,21 @@ nav
         border-bottom-left-radius: 40px
         border-top-left-radius: 40px
         position: absolute
+        top: 7%
         margin: 4px
         background-color: rgba(0, 0, 0, 0)
         cursor: pointer
         @media (max-width:876px)
           position: static
           background-color: $bgcolor-gray
-          border-radius: 40%
+          border-radius: 50%
+          aspect-ratio: 1/1 
+          @include btnsvg (48px)
+
       .containersvgSrch_svg 
-        @include styleSvg(24px)
+        @include styleSvg(22px)
+        stroke: $fill-svg
+        stroke-width: 10px
         fill: $fill-svg
         &:hover
           fill: #fff
@@ -122,14 +132,15 @@ nav
         &:focus
           background-color: #4949499f 
           color: #fff
-          font-size: 0.9rem
+          font-size: 0.95rem
           font-weight: 550
         &::placeholder
           color: $fill-svg
           font-size: 0.95rem
-          font-weight: 550
-        @media (max-width:1062px)
+          font-weight: 500
+        @media (max-width:1170px)
           width: 20dvw
+          border-radius: 40px
         @media (max-width:876px)
           display: none
         
@@ -159,12 +170,13 @@ nav
   .containerBtns1
     @include display (center)
     gap: 6%
-    @media (max-width:689px)
+    @media (max-width:876px)
       display: none
     &_btn
       @include btntext(600, 0.95rem)
       &:hover
         color: #fff
+        scale: 1.03
       
 
   .containerSeparator
@@ -188,44 +200,54 @@ nav
     @media (max-width:981px)
       gap: 2%
     @media (max-width:876px)
-      margin-left: 5%
+      position: absolute
+      right: 0
+      gap: 6px
     &_btn
       @include btntext(550, 0.8rem)
       @include display (center)
       gap: 6px
+      white-space: nowrap
       &:hover
         color: #fff
+        scale: 1.03
       @media (max-width:876px)
         gap: 1px
+      @media (max-width:525px)
+        display: none
       &_svg
         width: 16px
         height: 16px
-        @media (max-width:469px)
-          display: none
       &--logIn
         background-color: #fff 
         color: $bgcolor-body
         border-radius: 60px
-        padding: 6%
+        padding: 15px
         height: 48px
         font-weight: 700
         font-size: 1rem
-        @media ( min-width:1150px )
-          padding: 4%
-        @media ( max-width:870px )
-          padding: 4%
-        @media ( max-width:480px )
-          padding: 0%
-          
+        @media (max-width:525px)
+          display: flex
         &:hover
           color: $bgcolor-body
           background-color: #ffffffec 
-
-     
-      
-      
-
-      
+    &_menu
+      display: none
+      background-color: $bgcolor-gray
+      @include btnsvg (48px)
+      aspect-ratio: 1/1
+      border-radius: 50%
+      cursor: pointer
+      @media (max-width:525px)
+        display: flex
+        justify-content:  center
+        align-items: center
+      &:hover
+        background-color: $fill-svg
+      &_svg
+        @include styleSvg(25px)
+  
+    
   
         
        

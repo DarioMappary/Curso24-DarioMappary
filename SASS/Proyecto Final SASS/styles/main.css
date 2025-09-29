@@ -7,6 +7,7 @@
 
 body {
   background-color: #000;
+  overflow: hidden;
 }
 
 nav {
@@ -15,14 +16,17 @@ nav {
   flex-direction: row;
   gap: 1%;
   margin-top: 0.5%;
+  margin-bottom: 0.2%;
+  height: 72px;
+  position: relative;
 }
 nav .containerLogo {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   width: 72px;
-  height: 72px;
-  margin-top: 0.7%;
+  height: 32px;
+  margin-top: 8px;
   cursor: pointer;
 }
 @media (max-width: 481px) {
@@ -67,16 +71,14 @@ nav .containerHomeSrchbar_homebtn {
   background-color: #1f1f1f;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
+  aspect-ratio: 1/1;
   color: rgba(234, 248, 239, 0.5607843137);
-}
-@media (max-width: 876px) {
-  nav .containerHomeSrchbar_homebtn {
-    display: none;
-  }
+  aspect-ratio: 1/1;
 }
 nav .containerHomeSrchbar_homebtn:hover {
   background-color: rgba(73, 73, 73, 0.6235294118);
   color: #fff;
+  scale: 1.03;
 }
 nav .containerHomeSrchbar_homebtn .containersvgHome {
   width: 24px;
@@ -109,6 +111,7 @@ nav .containerHomeSrchbar_searchbar_btnsrch {
   border-bottom-left-radius: 40px;
   border-top-left-radius: 40px;
   position: absolute;
+  top: 7%;
   margin: 4px;
   background-color: rgba(0, 0, 0, 0);
   cursor: pointer;
@@ -117,12 +120,18 @@ nav .containerHomeSrchbar_searchbar_btnsrch {
   nav .containerHomeSrchbar_searchbar_btnsrch {
     position: static;
     background-color: #1f1f1f;
-    border-radius: 40%;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 48px;
+    height: 48px;
+    border: none;
   }
 }
 nav .containerHomeSrchbar_searchbar .containersvgSrch_svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
+  stroke: rgba(234, 248, 239, 0.5607843137);
+  stroke-width: 10px;
   fill: rgba(234, 248, 239, 0.5607843137);
 }
 nav .containerHomeSrchbar_searchbar .containersvgSrch_svg:hover {
@@ -144,22 +153,23 @@ nav .containerHomeSrchbar_searchbar_input:hover {
 nav .containerHomeSrchbar_searchbar_input:focus {
   background-color: rgba(73, 73, 73, 0.6235294118);
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 550;
 }
 nav .containerHomeSrchbar_searchbar_input::-moz-placeholder {
   color: rgba(234, 248, 239, 0.5607843137);
   font-size: 0.95rem;
-  font-weight: 550;
+  font-weight: 500;
 }
 nav .containerHomeSrchbar_searchbar_input::placeholder {
   color: rgba(234, 248, 239, 0.5607843137);
   font-size: 0.95rem;
-  font-weight: 550;
+  font-weight: 500;
 }
-@media (max-width: 1062px) {
+@media (max-width: 1170px) {
   nav .containerHomeSrchbar_searchbar_input {
     width: 20dvw;
+    border-radius: 40px;
   }
 }
 @media (max-width: 876px) {
@@ -203,7 +213,7 @@ nav .containerBtns1 {
   align-items: center;
   gap: 6%;
 }
-@media (max-width: 689px) {
+@media (max-width: 876px) {
   nav .containerBtns1 {
     display: none;
   }
@@ -220,6 +230,7 @@ nav .containerBtns1_btn {
 }
 nav .containerBtns1_btn:hover {
   color: #fff;
+  scale: 1.03;
 }
 nav .containerSeparator {
   display: flex;
@@ -256,7 +267,9 @@ nav .containerBtns2 {
 }
 @media (max-width: 876px) {
   nav .containerBtns2 {
-    margin-left: 5%;
+    position: absolute;
+    right: 0;
+    gap: 6px;
   }
 }
 nav .containerBtns2_btn {
@@ -271,76 +284,73 @@ nav .containerBtns2_btn {
   display: flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap;
 }
 nav .containerBtns2_btn:hover {
   color: #fff;
+  scale: 1.03;
 }
 @media (max-width: 876px) {
   nav .containerBtns2_btn {
     gap: 1px;
   }
 }
+@media (max-width: 525px) {
+  nav .containerBtns2_btn {
+    display: none;
+  }
+}
 nav .containerBtns2_btn_svg {
   width: 16px;
   height: 16px;
-}
-@media (max-width: 469px) {
-  nav .containerBtns2_btn_svg {
-    display: none;
-  }
 }
 nav .containerBtns2_btn--logIn {
   background-color: #fff;
   color: #000;
   border-radius: 60px;
-  padding: 6%;
+  padding: 15px;
   height: 48px;
   font-weight: 700;
   font-size: 1rem;
 }
-@media (min-width: 1150px) {
+@media (max-width: 525px) {
   nav .containerBtns2_btn--logIn {
-    padding: 4%;
-  }
-}
-@media (max-width: 870px) {
-  nav .containerBtns2_btn--logIn {
-    padding: 4%;
-  }
-}
-@media (max-width: 480px) {
-  nav .containerBtns2_btn--logIn {
-    padding: 0%;
+    display: flex;
   }
 }
 nav .containerBtns2_btn--logIn:hover {
   color: #000;
   background-color: rgba(255, 255, 255, 0.9254901961);
 }
-
-header {
-  margin-bottom: -1.5%;
-}
-
-.containergrid {
-  display: grid;
-  grid-template-columns: 31dvw auto;
-  height: 88dvh;
-  gap: 0.5%;
-  padding: 0% 0.5% 0% 0.5%;
-}
-.containergrid_item {
+nav .containerBtns2_menu {
+  display: none;
   background-color: #1f1f1f;
-  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media (max-width: 525px) {
+  nav .containerBtns2_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+nav .containerBtns2_menu:hover {
+  background-color: rgba(234, 248, 239, 0.5607843137);
+}
+nav .containerBtns2_menu_svg {
+  width: 25px;
+  height: 25px;
 }
 
 .aside {
   position: relative;
-}
-@media (max-width: 580px) {
-  .aside {
-    display: none;
-  }
+  background-color: #101010;
+  min-width: 282px;
 }
 
 .top {
@@ -363,8 +373,9 @@ header {
   justify-content: center;
   align-items: center;
   border: none;
-  background-color: #1f1f1f;
+  background-color: #101010;
   cursor: pointer;
+  padding-left: 0.8%;
 }
 .top_btn:hover {
   background-color: rgba(51, 51, 51, 0.4666666667);
@@ -513,11 +524,7 @@ header {
   grid-template-rows: repeat(1, 1fr);
   overflow: hidden;
   padding: 3%;
-}
-@media (max-width: 580px) {
-  .content {
-    width: 98dvw;
-  }
+  background-image: linear-gradient(#1f1f1f, #101010);
 }
 .content:hover {
   overflow-y: auto;
@@ -535,10 +542,17 @@ header {
   background-color: rgba(255, 255, 255, 0.363);
 }
 .content_tittle {
-  height: 7dvh;
   color: #fff;
   font-size: 1rem;
   font-weight: 900;
+  display: inline-flex;
+  margin-bottom: 0.5%;
+}
+.content_tittle_h2 {
+  cursor: pointer;
+}
+.content_tittle_h2:hover {
+  text-decoration: underline;
 }
 .content_ctnrCards {
   height: 34.35dvh;
@@ -570,24 +584,9 @@ header {
   transform: translateY(0);
   opacity: 1;
 }
-@media (max-width: 1285px) {
+@media (max-width: 1300px) {
   .card {
-    width: 14.8dvw;
-  }
-}
-@media (max-width: 1220px) {
-  .card {
-    width: 15.5dvw;
-  }
-}
-@media (max-width: 1150px) {
-  .card {
-    width: 16.5dvw;
-  }
-}
-@media (max-width: 1100px) {
-  .card {
-    width: 188.5px;
+    width: 188.75px;
   }
 }
 .card_img {
@@ -595,9 +594,9 @@ header {
   height: 24dvh;
   border-radius: 8px;
 }
-@media (max-width: 1220px) {
+@media (max-width: 1300px) {
   .card_img {
-    width: 135px;
+    width: 168.75px;
   }
 }
 .card_img--imgartist {
@@ -678,19 +677,39 @@ header {
     right: 630px;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .nav_arrow {
     right: 720px;
   }
 }
-@media (max-width: 620px) {
+@media (max-width: 708px) {
   .nav_arrow {
     right: 780px;
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 645px) {
   .nav_arrow {
     right: 825px;
+  }
+}
+@media (max-width: 600px) {
+  .nav_arrow {
+    right: 850px;
+  }
+}
+@media (max-width: 575px) {
+  .nav_arrow {
+    right: 890px;
+  }
+}
+@media (max-width: 530px) {
+  .nav_arrow {
+    right: 930px;
+  }
+}
+@media (max-width: 500px) {
+  .nav_arrow {
+    right: 970px;
   }
 }
 .nav_arrow:hover {
@@ -705,4 +724,62 @@ header {
 }
 .nav_arrow_path {
   fill: rgba(255, 255, 255, 0.5607843137);
+}
+
+.ad_footer {
+  background-image: linear-gradient(to right, #c5107f, #58bae4);
+  width: 100dvw;
+  height: 70px;
+  margin: 0.5% 0%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.ad_footer .containerAd {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+  padding: 1.5%;
+}
+.ad_footer .containerAd_text {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.ad_footer .containerAd_text_tittle {
+  font-size: 0.88rem;
+  font-weight: 550;
+}
+.ad_footer .containerAd_text_span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.ad_footer .containerAd_btn {
+  background-color: #fff;
+  border: none;
+  padding: 1.1% 2.5%;
+  border-radius: 40px;
+  font-size: 0.95rem;
+  font-weight: 750;
+  cursor: pointer;
+}
+.ad_footer .containerAd_btn:hover {
+  scale: 1.05;
+}
+
+header {
+  margin-bottom: -1.5%;
+}
+
+.containergrid {
+  display: grid;
+  grid-template-columns: minmax(282px, 29dvw) auto;
+  height: 80dvh;
+  gap: 0.5%;
+  padding: 0% 0.5% 0% 0.5%;
+  position: relative;
+}
+.containergrid_item {
+  border-radius: 10px;
 }/*# sourceMappingURL=main.css.map */
