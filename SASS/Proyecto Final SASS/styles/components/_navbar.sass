@@ -46,13 +46,25 @@ nav
     width: 72px
     height: 32px
     margin-top: 8px
-    @media (max-width:481px)
-     width: 32px
+    @media (max-width:500px)
+     width: 50dvw
      height: 32px
+     align-items: center
+     justify-content: flex-start
+     padding: 3%
+     gap: 4%
     cursor: pointer
     &_Logo
       width: 32px
       height: 32px
+    &_span
+      display: none
+      color: #fff
+      font-weight: 700
+      font-size: 1rem
+      @media ( max-width:500px)
+        display: inline-block
+        
 
   .containerHomeSrchbar
     @include display (center)
@@ -75,6 +87,9 @@ nav
       aspect-ratio: 1/1
       color: $fill-svg
       aspect-ratio: 1/1
+      @media ( max-width:500px)
+        display: none
+        
       &:hover
         background-color:  #4949499f
         color: #fff
@@ -110,6 +125,9 @@ nav
           border-radius: 50%
           aspect-ratio: 1/1 
           @include btnsvg (48px)
+        @media ( max-width:500px)
+          display: none
+          
 
       .containersvgSrch_svg 
         @include styleSvg(22px)
@@ -228,6 +246,8 @@ nav
         font-size: 1rem
         @media (max-width:525px)
           display: flex
+        @media (max-width: 500px)
+          display: none
         &:hover
           color: $bgcolor-body
           background-color: #ffffffec 
@@ -246,6 +266,7 @@ nav
         background-color: $fill-svg
       &_svg
         @include styleSvg(25px)
+        fill: #fff
   
     
   

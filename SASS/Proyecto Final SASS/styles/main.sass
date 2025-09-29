@@ -10,6 +10,7 @@
 body 
     background-color: #000
     overflow: hidden
+    position: relative
 
 @import "components/navbar"
 
@@ -17,7 +18,7 @@ body
 
 @import "components/content"
 
-@import "components/adFooter"
+@import "components/Footer"
 
 header
     margin-bottom: -1.5%
@@ -29,6 +30,9 @@ header
   gap: 0.5%
   padding: 0% 0.5% 0% 0.5%
   position: relative
+  @media (max-width: 500px)
+    display: flex
+    height: 90dvh
   &_item 
     border-radius: 10px
 
