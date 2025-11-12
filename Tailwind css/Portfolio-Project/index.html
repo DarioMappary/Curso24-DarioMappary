@@ -1,39 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dario Mappary - Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://kit.fontawesome.com/d604a63c15.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <nav class="flex justify-between items-center p-8 bg-neutral-900 text-white">
-            <div>
-                <span class="text-2xl font-extrabold">Dario Mappary</span>
-            </div>
-            <div>
-                <ul class="flex gap-6 items-center">
-                    <li>Home <span><i class="fa-regular fa-house"></i></span></li>
-                    <li>About me <span><i class="fa-regular fa-user"></i></span></li>
-                    <li>Projects <span class="text-lg"><i class="fa-regular fa-newspaper"></i></span></li>
-                </ul>
-            </div>
-        </nav>
+    <script
+      src="https://kit.fontawesome.com/d604a63c15.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="bg-radial from-[#3d0033] to-[#021f34] relative">
+    <header
+      class="fixed w-full top-0 z-1000 backdrop-blur-md bg-linear-to-br from-[#3d0033]/90 via-[#021f34]/90 to-neutral-900/90 sm:bg-linear-0 sm:from-neutral-900/90 sm:via-neutral-900/90 sm:to-neutral-900/90"
+    >
+      <nav
+        class="flex justify-between items-center p-8 text-white sticky sm:text-xl"
+      >
+        <div>
+          <span class="text-2xl sm:text-4xl font-extrabold">Dario Mappary</span>
+        </div>
+        <div>
+          <ul class="flex gap-6 items-center">
+            <li class="hidden sm:block">
+              <a
+                class="sm:flex sm:flex-col-reverse sm:items-center md:block"
+                href="#Home"
+              >
+                Home <span><i class="fa-regular fa-house"></i></span>
+              </a>
+            </li>
+            <li class="hidden sm:block">
+              <a
+                class="sm:flex sm:flex-col-reverse sm:items-center md:block"
+                href="#About_me"
+              >
+                About me <span><i class="fa-regular fa-user"></i></span>
+              </a>
+            </li>
+            <li
+              class="hidden sm:flex sm:flex-col-reverse sm:items-center md:block"
+            >
+              Projects
+              <span class="text-lg"
+                ><i class="fa-regular fa-newspaper"></i
+              ></span>
+            </li>
+            <li class="sm:hidden">
+              <span class="text-2xl"><i class="fa-solid fa-bars"></i></span>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <main>
-        <section id="Home" class="w-full h-screen bg-neutral-800 flex flex-col items-center gap-8 text-white">
-            <div class="w-1/3">
-                <img class="rounded-md" src="./assets/YoAI.jpeg" alt="me">
-            </div>
-            <h1>It's great to see you here! I'm Darío Mappary.</h1>
-            <h2><span>Full Stack Developer.</span> I make sure everything works perfectly, transforming ideas into functional and scalable web products. Ensuring every piece works to perfection!</h2>
-
-        </section>
+      <section
+        id="Home"
+        class="w-full h-screen bg-contain bg-[url(./assets/bg2.jpg)] relative pt-25"
+      >
+        <div
+          class="absolute inset-0 bg-radial from-[#3d00337e] to-[#021f348d]"
+        ></div>
+        <div
+          class="flex flex-col items-center gap-8 z-10 lg:flex-row-reverse lg:justify-around lg:py-[5%] relative sm:mt-[4%] lg:mt-0"
+        >
+          <div class="max-w-4/5 pt-4 animate__animated animate__pulse sm:w-1/3">
+            <img class="rounded-2xl" src="./assets/YoAI.jpeg" alt="me" />
+          </div>
+          <div class="flex flex-col lg:w-1/3 lg:items-start px-4">
+            <h1
+              class="font-extrabold text-white text-4xl py-2 animate__animated animate__pulse sm:text-5xl lg:leading-20"
+            >
+              <span class="text-red-600">It's great to see you here!</span> I'm
+              Darío Mappary.
+            </h1>
+            <h2 class="text-xl text-gray-300 py-2 sm:text-2xl">
+              <span class="font-bold text-white">Full Stack Developer.</span> I
+              make sure everything works perfectly, transforming ideas into
+              functional and scalable web products. Ensuring every piece works
+              to perfection!
+            </h2>
+            <ul class="text-white flex flex-row text-4xl gap-4 w-full">
+              <li><i class="fa-brands fa-github"></i></li>
+              <li><i class="fa-brands fa-instagram"></i></li>
+              <li><i class="fa-brands fa-linkedin"></i></li>
+            </ul>
+          </div>
+        </div>
+        <button
+          class="sm:block absolute hidden bottom-7 left-1/2 rounded-4xl hover:bg-gray-300/15 cursor-pointer animate__animated animate__bounce z-20 w-18 h-18"
+        >
+          <a href="#About_me"
+            ><span class="text-white text-4xl"
+              ><i class="fa-solid fa-angle-down"></i></span
+          ></a>
+        </button>
+      </section>
+      <section
+        id="About_me"
+        class="w-full h-screen bg-contain bg-[url(./assets/bg1.jpg)] relative">
+        <div
+          class="absolute inset-0 bg-radial from-[#3d00337e] to-[#021f348d]"
+        ></div>
+        <div class="relative z-10 flex flex-col justify-between pt-28 lg:flex-row h-full">
+          <div class="w-full flex flex-col justify-center gap-3 px-8 lg:w-2/4 lg:pl-24 lg:pb-36" data-aos="fade-right">
+            <h2 class="text-red-600 text-3xl font-bold sm:text-5xl">About me</h2>
+            <p class="text-gray-300 text-md lg:text-xl xl:text-2xl">
+              <span class="text-white">"Full-Stack Developer in Growth:</span> Logic and Quality in Code." "As
+              a Full-Stack Developer in training, my driving force is a passion
+              for new technologies and logical problem-solving. My technical
+              foundation is solid in HTML, CSS, Sass, and Tailwind CSS, allowing
+              me to build functional and aesthetic interfaces with great
+              precision. My goal is clear: to create web solutions and apps that
+              drive markets and businesses.  
+              My work approach is methodical,
+              fast, and adaptable, always prioritizing code quality and
+              scalability. I bring value to the team thanks to my autonomy,
+              self-management, and aptitude for mentorship and communication. If
+              you are looking for someone proactive with a strong foundation
+              ready to evolve within your team, I would be delighted to
+              collaborate on your next project."</p>
+          </div>
+          <div class="sm:flex items-end xl:pr-24">
+            <img src="./assets/working.png" alt="working" />
+          </div>
+        </div>
+      </section>
+      <section id="Projects" class="w-full h-screen">
+        <h2 class="text-4xl text-red-600 pt-32 font-extrabold md:flex md:justify-center">My projects</h2>
+        <div class="w-full flex flex-col items-center gap-8 pt-12 md:flex-row md:justify-center md:pt-40"> 
+        <div class="w-3/4 border-4 md:w-3/12">
+         <img src="./assets/project2.png" alt="Project-html"></div>
+         <div class="w-3/4 md:w-3/12">
+         <img src="./assets/project3.png" alt="Project-css"></div>
+         <div class="w-3/4 md:w-3/12">
+         <img src="./assets/project1.png" alt="Project-sass">
+        </div>
+        </div>
+      </section>
     </main>
-</body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
